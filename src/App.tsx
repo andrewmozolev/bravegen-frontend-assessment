@@ -1,11 +1,12 @@
-import reactLogo from './assets/react.svg';
+import Layout from './layout/Layout';
+import AppRouter from './router/AppRouter';
 
 function App() {
   return (
     <>
-      <div>
-        <img src={reactLogo} className="logo react" alt="React logo" />
-      </div>
+      <Layout>
+        <AppRouter />
+      </Layout>
     </>
   );
 }
