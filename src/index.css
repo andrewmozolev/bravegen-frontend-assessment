@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-primary: #68ab0d;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Inter',
+    Helvetica Neue,
+    sans-serif;
+}
