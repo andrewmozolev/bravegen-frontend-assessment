@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Tags() {
   return (
     <div className="flex grow items-center justify-center">
-      <h1>Welcome to the Home Page</h1>
+      <h1>Tags Page</h1>
     </div>
   );
 }

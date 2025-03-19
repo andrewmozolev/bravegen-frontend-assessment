@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Reviews() {
   return (
     <div className="flex grow items-center justify-center">
-      <h1>Welcome to the Home Page</h1>
+      <h1>Reviews Page</h1>
     </div>
   );
 }

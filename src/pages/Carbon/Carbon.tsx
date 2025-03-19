@@ -1,7 +1,7 @@
-export default function Home() {
+export default function Carbon() {
   return (
     <div className="flex grow items-center justify-center">
-      <h1>Welcome to the Home Page</h1>
+      <h1>Carbon Page</h1>
     </div>
   );
 }
