@@ -11,6 +11,7 @@ import Integrations from '../pages/Settings/Integrations';
 import OrganisationManage from '../pages/Settings/OrganisationManage';
 import Settings from '../pages/Settings/Settings';
 import Tags from '../pages/Settings/Tags';
+import Users from '../pages/Settings/Users';
 import Utilities from '../pages/Utilities/Utilities';
 
 export default function AppRouter() {
@@ -25,11 +26,13 @@ export default function AppRouter() {
       <Route path="/Reports" element={<Reports />} />
       <Route path="/Actions" element={<Actions />} />
       <Route path="/Settings" element={<Settings />}>
-        <Route path="/Settings/Tags" element={<Tags />} />
         <Route path="/Settings/Organisation-Manage" element={<OrganisationManage />} />
+        <Route path="/Settings/Users" element={<Users />} />
+        <Route path="/Settings/Tags" element={<Tags />} />
         <Route path="/Settings/Integrations" element={<Integrations />} />
         <Route path="/Settings/:page" element={<NotFound />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
