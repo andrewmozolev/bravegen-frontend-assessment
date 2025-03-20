@@ -4,6 +4,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import { NavLink } from 'react-router-dom';
 import Logo from '../assets/Logo.png';
+import { SideBarLink } from '../interfaces/SideBar';
+
+const sideBarLinks: SideBarLink[] = [
+  {
+    to: '/Insights',
+    icon: faGaugeHigh,
+    title: 'Insights',
+  },
+  {
+    to: '/Collect',
+    icon: faInbox,
+    title: 'Collect',
+  },
+  {
+    to: '/Reviews',
+    icon: faThumbsUp,
+    title: 'Reviews',
+  },
+  {
+    to: '/Carbon',
+    icon: faTree,
+    title: 'Carbon',
+  },
+  {
+    to: '/Utilities',
+    icon: faWrench,
+    title: 'Utilities',
+  },
+  {
+    to: '/Reports',
+    icon: faFileLines,
+    title: 'Reports',
+  },
+  {
+    to: '/Actions',
+    icon: faClipboardCheck,
+    title: 'Actions',
+  },
+];
 
 export default function SideBar() {
   const CustomNavLink = ({
@@ -33,41 +72,13 @@ export default function SideBar() {
       </NavLink>
 
       <ul className="flex flex-col gap-6 text-sm font-light">
-        <li className="flex flex-col items-center gap-1">
-          <CustomNavLink to="/Insights" icon={faGaugeHigh}>
-            Insights
-          </CustomNavLink>
-        </li>
-        <li className="flex flex-col items-center gap-1">
-          <CustomNavLink to="/Collect" icon={faInbox}>
-            Collect
-          </CustomNavLink>
-        </li>
-        <li className="flex flex-col items-center gap-1">
-          <CustomNavLink to="/Reviews" icon={faThumbsUp}>
-            Reviews
-          </CustomNavLink>
-        </li>
-        <li className="flex flex-col items-center gap-1">
-          <CustomNavLink to="/Carbon" icon={faTree}>
-            Carbon
-          </CustomNavLink>
-        </li>
-        <li className="flex flex-col items-center gap-1">
-          <CustomNavLink to="/Utilities" icon={faWrench}>
-            Utilities
-          </CustomNavLink>
-        </li>
-        <li className="flex flex-col items-center gap-1">
-          <CustomNavLink to="/Reports" icon={faFileLines}>
-            Reports
-          </CustomNavLink>
-        </li>
-        <li className="flex flex-col items-center gap-1">
-          <CustomNavLink to="/Actions" icon={faClipboardCheck}>
-            Actions
-          </CustomNavLink>
-        </li>
+        {sideBarLinks.map((link) => (
+          <li key={link.to} className="flex flex-col items-center gap-1">
+            <CustomNavLink to={link.to} icon={link.icon}>
+              {link.title}
+            </CustomNavLink>
+          </li>
+        ))}
       </ul>
 
       <NavLink
